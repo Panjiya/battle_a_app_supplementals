@@ -3,4 +3,8 @@
 <body><main><h1>Experience mapping</h1><p class="sub">Each page asks for the passphrase provided with the application.</p>
 <a class="card" href="written.html"><b>Experience mapping · written</b><span>Every responsibility and qualification in the listing, mapped and rated.</span></a>
 <a class="card" href="visual.html"><b>Experience mapping · visual</b><span>The career as an ascent. Desktop browser recommended; scroll or click to move between levels.</span></a>
-<p class="note">Pages are encrypted in the browser (AES-256, PBKDF2) via StatiCrypt; nothing here is readable without the passphrase.</p></main></body></html>
+<p class="note">Pages are encrypted in the browser (AES-256, PBKDF2) via StatiCrypt; nothing here is readable without the passphrase.</p></main><script>
+// If this page was opened with a StatiCrypt share fragment, pass it on to the two pages so they open without typing.
+(function(){var h=location.hash;if(h&&h.indexOf('staticrypt_pwd=')>-1){document.querySelectorAll('a.card').forEach(function(a){a.href=a.getAttribute('href')+h;});
+var n=document.querySelector('p.sub');if(n)n.textContent='Open either page; this link carries the passphrase for you.';}})();
+</script></body></html>

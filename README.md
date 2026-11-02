@@ -1,1 +1,3 @@
-# battle_a_app_supplementals
+# Supplementals
+
+Static pages; each asks for a passphrase.
